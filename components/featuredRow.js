@@ -3,7 +3,7 @@ import React from 'react'
 import { themeColors } from '../theme'
 import RestaurantCard from './restaurantCard'
 
-export default function FeaturedRow(title, description, restaurants) {
+export default function FeaturedRow({title, description, restaurants}) {
   return (
     <View>
         <View className="flex-row justify-between items-center px-4">
@@ -29,7 +29,7 @@ export default function FeaturedRow(title, description, restaurants) {
                 restaurants.map((restaurants, index)=>{
                     return(
                         <RestaurantCard
-                        item={restaurant}
+                        item={restaurants}
                         key={index} />
                     )
                 })

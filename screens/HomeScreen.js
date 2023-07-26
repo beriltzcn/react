@@ -5,6 +5,7 @@ import Categories from '../components/categories'
 import FeatureRow from '../components/featuredRow'
 import * as Icon from "react-native-feather";
 import { themeColors } from '../theme'
+import { categories, featured} from '../constants'
 
 export default function HomeScreen() {
     return (
@@ -32,13 +33,13 @@ export default function HomeScreen() {
 
                 <View className="mt-5">
                     {
-                        Categories.map((item, index) => {
+                        categories.map((item, index) => {
                             return (
                                 <FeatureRow
                                     key={index}
                                     title={item.title}
-                                    resturants={item.resturants}
-                                    description={item.description}
+                                    restaurants={featured.restaurants}
+                                    description={featured.description}
                                 />
                             )
                         })
